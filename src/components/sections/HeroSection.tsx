@@ -1,18 +1,15 @@
-
 import { Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroScene from "./HeroScene";
-
 export default function HeroSection() {
-  return (
-    <section id="home" className="min-h-screen pt-24 lg:pt-28 px-6 lg:px-12">
+  return <section id="home" className="min-h-screen pt-24 lg:pt-28 px-6 lg:px-12">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="animate-fade-in">
               <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-portfolio-900 text-portfolio-200 border border-portfolio-800">
                 <Briefcase size={16} />
-                <span className="text-sm font-medium">3D Product Designer</span>
+                <span className="text-sm font-medium">Software/Cybersecurity/Machine Learning Engineer</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-display font-bold leading-tight">
@@ -56,6 +53,5 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
