@@ -1,15 +1,12 @@
-
 import { Layers3 } from "lucide-react";
-
 export default function Footer() {
-  return (
-    <footer className="glassmorphism border-t border-white/5 py-10">
+  return <footer className="glassmorphism border-t border-white/5 py-10">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="flex items-center gap-2">
               <Layers3 size={20} className="text-portfolio-500" />
-              <span className="text-lg font-display font-bold text-gradient">Portfolio</span>
+              <span className="text-lg font-display font-bold text-gradient">Sriram Anasuri</span>
             </a>
             <p className="text-muted-foreground mt-2 text-sm">
               Bringing designs to life through 3D innovation.
@@ -42,6 +39,5 @@ export default function Footer() {
           © {new Date().getFullYear()} Portfolio. All rights reserved.
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
