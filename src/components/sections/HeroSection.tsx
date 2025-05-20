@@ -1,5 +1,5 @@
 
-import { Briefcase, FileText } from "lucide-react";
+import { Briefcase, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroScene from "./HeroScene";
 import { personalInfo } from "@/data/resumeData";
@@ -29,9 +29,9 @@ export default function HeroSection() {
                   <a href="#projects">View Projects</a>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
-                  <a href="/resume" className="flex items-center gap-2">
-                    <FileText size={16} />
-                    View Resume
+                  <a href="/resume.pdf" download className="flex items-center gap-2">
+                    <Download size={16} />
+                    Download Resume
                   </a>
                 </Button>
               </div>

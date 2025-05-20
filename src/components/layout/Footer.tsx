@@ -1,4 +1,7 @@
+
 import { Layers3 } from "lucide-react";
+import { personalInfo } from "@/data/resumeData";
+
 export default function Footer() {
   return <footer className="glassmorphism border-t border-white/5 py-10">
       <div className="container mx-auto px-6 lg:px-12">
@@ -27,10 +30,9 @@ export default function Footer() {
             <div>
               <h4 className="font-display font-medium mb-3">Connect</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">LinkedIn</a></li>
-                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">GitHub</a></li>
-                <li><a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">Dribbble</a></li>
-                <li><a href="https://behance.net/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">Behance</a></li>
+                <li><a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">LinkedIn</a></li>
+                <li><a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">GitHub</a></li>
+                <li><a href={`mailto:${personalInfo.email}`} className="text-muted-foreground hover:text-foreground">Email</a></li>
               </ul>
             </div>
           </div>

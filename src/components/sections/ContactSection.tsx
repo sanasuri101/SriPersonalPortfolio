@@ -1,18 +1,18 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { personalInfo } from "@/data/resumeData";
 
 const contactInfo = [
   {
     icon: <Mail className="h-5 w-5" />,
     title: "Email",
-    value: "hello@portfolio.design",
-    link: "mailto:hello@portfolio.design"
+    value: personalInfo.email,
+    link: `mailto:${personalInfo.email}`
   },
   {
     icon: <Phone className="h-5 w-5" />,
@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: <MapPin className="h-5 w-5" />,
     title: "Location",
-    value: "San Francisco, CA",
+    value: personalInfo.location,
     link: "https://maps.google.com"
   }
 ];
@@ -175,49 +175,33 @@ export default function ContactSection() {
               <CardContent className="p-6">
                 <h4 className="text-xl font-display font-medium mb-4">Let's Collaborate</h4>
                 <p className="text-muted-foreground">
-                  I'm open to discussing product design projects, creative collaborations, 
-                  or opportunities to bring your ideas to life. If you have a project in mind, 
-                  don't hesitate to reach out!
+                  I'm open to discussing projects, creative collaborations, 
+                  or opportunities in cybersecurity, machine learning, and software engineering.
+                  If you have a project in mind, don't hesitate to reach out!
                 </p>
                 
                 <div className="mt-6 flex gap-4">
                   <a 
-                    href="https://linkedin.com/" 
+                    href={personalInfo.linkedin}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="h-10 w-10 rounded-full flex items-center justify-center bg-muted/30 hover:bg-portfolio-500/20 transition-colors"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                      <rect x="2" y="9" width="4" height="12"></rect>
-                      <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
+                    <Linkedin className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://dribbble.com/" 
+                    href={personalInfo.github}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="h-10 w-10 rounded-full flex items-center justify-center bg-muted/30 hover:bg-portfolio-500/20 transition-colors"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path>
-                    </svg>
+                    <Github className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://behance.net/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    href={`mailto:${personalInfo.email}`}
                     className="h-10 w-10 rounded-full flex items-center justify-center bg-muted/30 hover:bg-portfolio-500/20 transition-colors"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 7h-7v6h7V7z"></path>
-                      <path d="M22 10h-7"></path>
-                      <path d="M4 15h8"></path>
-                      <path d="M4 7h10"></path>
-                      <path d="M9 10h5"></path>
-                      <path d="M9 17l3-3 3 3"></path>
-                    </svg>
+                    <Mail className="h-5 w-5" />
                   </a>
                 </div>
               </CardContent>

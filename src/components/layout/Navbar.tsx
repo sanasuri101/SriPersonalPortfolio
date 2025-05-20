@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Layers3, Menu, X, FileText } from "lucide-react";
+import { Layers3, Menu, X, FileText, Download } from "lucide-react";
 import { personalInfo } from "@/data/resumeData";
 
 const navLinks = [{
@@ -49,8 +49,8 @@ export default function Navbar() {
               {link.name}
             </a>)}
           <Button className="ml-4" asChild>
-            <a href="/resume" className="flex items-center gap-2">
-              <FileText size={16} />
+            <a href="/resume.pdf" download className="flex items-center gap-2">
+              <Download size={16} />
               Resume
             </a>
           </Button>
@@ -69,8 +69,8 @@ export default function Navbar() {
                 {link.name}
               </a>)}
             <Button className="mt-2 w-full flex items-center justify-center gap-2" asChild>
-              <a href="/resume">
-                <FileText size={16} />
+              <a href="/resume.pdf" download>
+                <Download size={16} />
                 Resume
               </a>
             </Button>

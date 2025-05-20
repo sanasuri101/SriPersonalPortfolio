@@ -3,8 +3,9 @@ export const personalInfo = {
   name: "Sriram Anasuri",
   title: "SWE/Cybersecurity/Machine Learning Engineer",
   location: "San Francisco Bay Area",
-  email: "hello@portfolio.design", // Replace with your actual email if desired
-  linkedin: "https://linkedin.com/in/sriram-anasuri", // Replace with your actual LinkedIn URL
+  email: "sriramanasuri@gmail.com", // Updated email
+  linkedin: "https://www.linkedin.com/in/sriram-anasuri-7221b0191/", // Updated LinkedIn URL
+  github: "https://github.com/sanasuri101", // Added GitHub URL
   summary: "I am an AI Engineer with over 2 years of experience in machine learning, business intelligence, and data analytics, specializing in supporting sales teams, developing strategic partnerships, and delivering AI-driven solutions. I have a proven track record in transforming technical talent into high-performing sales teams and aligning AI technology with business objectives."
 };
 
