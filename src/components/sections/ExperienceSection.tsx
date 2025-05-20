@@ -1,45 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import ExperienceScene from "./ExperienceScene";
-
-const experiences = [
-  {
-    position: "Senior Product Designer",
-    company: "TechDesign Studios",
-    period: "2023 - Present",
-    description: "Lead product designer for consumer electronics and smart home products. Collaborated with engineers and marketing teams to create innovative designs that meet both technical requirements and market demands.",
-    technologies: ["Blender", "Fusion 360", "Figma"]
-  },
-  {
-    position: "3D Visualization Specialist",
-    company: "VisualCraft Agency",
-    period: "2021 - 2023",
-    description: "Created high-quality 3D visualizations and animations for product marketing and advertising campaigns. Worked with various clients across industries including furniture, consumer electronics, and automotive.",
-    technologies: ["Cinema 4D", "V-Ray", "Adobe After Effects"]
-  },
-  {
-    position: "Junior Product Designer",
-    company: "InnovateDesign Co.",
-    period: "2020 - 2021",
-    description: "Assisted senior designers in conceptualizing and creating product designs. Conducted user research and created prototypes for testing and validation.",
-    technologies: ["SolidWorks", "Sketch", "KeyShot"]
-  }
-];
-
-const education = [
-  {
-    degree: "Master of Arts in Industrial Design",
-    institution: "Design Institute of Technology",
-    period: "2018 - 2020",
-    description: "Focused on sustainable product design and digital fabrication. Thesis project on smart home interface design."
-  },
-  {
-    degree: "Bachelor of Fine Arts in Product Design",
-    institution: "Creative Arts University",
-    period: "2014 - 2018",
-    description: "Foundation in design principles, materials, manufacturing processes, and digital design tools."
-  }
-];
+import { experiences, education } from "@/data/resumeData";
 
 export default function ExperienceSection() {
   return (
@@ -98,7 +60,7 @@ export default function ExperienceSection() {
             <div className="mb-8 flex items-center gap-4">
               <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-portfolio-500/10">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-portfolio-500">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M22 10l-10-5-10 5 10 5z"></path>
                   <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                 </svg>
               </div>

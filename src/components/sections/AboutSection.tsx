@@ -1,47 +1,7 @@
 
-import { Wand, Layers3, View, Pencil } from "lucide-react";
+import { Code, Shield, Database, Cpu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const skills = [
-  "3D Modeling",
-  "Product Design",
-  "UI/UX Design",
-  "CAD",
-  "Prototyping",
-  "User Research",
-  "Rendering",
-  "Animation",
-  "Material Design",
-  "Blender",
-  "Cinema 4D",
-  "SolidWorks",
-  "Rhino",
-  "Figma",
-  "Adobe Suite"
-];
-
-const services = [
-  {
-    icon: <Pencil className="h-6 w-6" />,
-    title: "Product Design",
-    description: "End-to-end product design with a focus on usability, aesthetics, and manufacturability."
-  },
-  {
-    icon: <Layers3 className="h-6 w-6" />,
-    title: "3D Modeling",
-    description: "High quality 3D models with clean topology and proper scale for visualization or production."
-  },
-  {
-    icon: <View className="h-6 w-6" />,
-    title: "Visualization",
-    description: "Photorealistic renderings and animations to showcase products in context."
-  },
-  {
-    icon: <Wand className="h-6 w-6" />,
-    title: "Prototyping",
-    description: "Functional prototypes to validate design concepts and test user interaction."
-  }
-];
+import { skills, services, personalInfo } from "@/data/resumeData";
 
 export default function AboutSection() {
   return (
@@ -55,21 +15,21 @@ export default function AboutSection() {
             
             <div className="space-y-6 text-muted-foreground">
               <p>
-                I'm a passionate 3D Product Designer with a keen eye for detail and a commitment to creating 
-                designs that are both aesthetically pleasing and functional. With over 3 years of experience, 
-                I've worked with a variety of clients from startups to established brands.
+                {personalInfo.summary} I am seeking to leverage my expertise in AI, machine learning, 
+                and business development to drive growth and innovation.
               </p>
               
               <p>
-                My design process starts with understanding the user's needs and the business goals. 
-                I believe that good design should solve real problems and create emotional connections 
-                with users. I'm constantly exploring new tools and techniques to push the boundaries 
-                of what's possible in 3D design.
+                My technical approach combines cybersecurity fundamentals with cutting-edge AI methodologies. 
+                I've successfully migrated enterprise-scale applications and implemented security solutions 
+                for Fortune 100 companies. My work across identity management, cloud infrastructure, and data 
+                analytics demonstrates my versatile technical skillset.
               </p>
               
               <p>
-                When I'm not designing, you can find me exploring new design trends, experimenting 
-                with new technologies, or sharing my knowledge through articles and tutorials.
+                When I'm not coding or implementing security solutions, I'm exploring the latest 
+                advancements in machine learning, contributing to research projects, or optimizing 
+                systems for better performance and security.
               </p>
             </div>
             
@@ -98,7 +58,10 @@ export default function AboutSection() {
                 <Card key={index} className="glassmorphism border-white/10">
                   <CardContent className="p-6">
                     <div className="h-12 w-12 rounded-lg flex items-center justify-center bg-portfolio-500/10 mb-4">
-                      {service.icon}
+                      {index === 0 && <Shield className="h-6 w-6" />}
+                      {index === 1 && <Code className="h-6 w-6" />}
+                      {index === 2 && <Cpu className="h-6 w-6" />}
+                      {index === 3 && <Database className="h-6 w-6" />}
                     </div>
                     
                     <h4 className="text-xl font-display font-medium mb-2">{service.title}</h4>

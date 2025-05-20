@@ -1,7 +1,10 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Layers3, Menu, X } from "lucide-react";
+import { Layers3, Menu, X, FileText } from "lucide-react";
+import { personalInfo } from "@/data/resumeData";
+
 const navLinks = [{
   name: "Home",
   href: "#home"
@@ -18,9 +21,11 @@ const navLinks = [{
   name: "Contact",
   href: "#contact"
 }];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -30,11 +35,12 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return <header className={cn("fixed top-0 w-full z-50 transition-all duration-300 px-6 lg:px-12", scrolled ? "py-4 glassmorphism backdrop-blur-lg" : "py-6 bg-transparent")}>
       <div className="container flex justify-between items-center">
         <a href="#home" className="text-xl font-display font-bold flex items-center gap-2">
           <Layers3 size={24} className="text-portfolio-500" />
-          <span className="text-gradient">Sriram Anasuri</span>
+          <span className="text-gradient">{personalInfo.name}</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -42,7 +48,12 @@ export default function Navbar() {
           {navLinks.map(link => <a key={link.name} href={link.href} className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               {link.name}
             </a>)}
-          <Button className="ml-4">Resume</Button>
+          <Button className="ml-4" asChild>
+            <a href="/resume" className="flex items-center gap-2">
+              <FileText size={16} />
+              Resume
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -57,7 +68,12 @@ export default function Navbar() {
             {navLinks.map(link => <a key={link.name} href={link.href} className="px-4 py-3 text-sm font-medium hover:bg-muted/20 rounded-md transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {link.name}
               </a>)}
-            <Button className="mt-2 w-full">Resume</Button>
+            <Button className="mt-2 w-full flex items-center justify-center gap-2" asChild>
+              <a href="/resume">
+                <FileText size={16} />
+                Resume
+              </a>
+            </Button>
           </div>
         </nav>}
     </header>;
