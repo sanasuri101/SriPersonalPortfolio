@@ -1,5 +1,5 @@
 
-import { Portfolio } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroScene from "./HeroScene";
 
@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div className="order-2 lg:order-1">
             <div className="animate-fade-in">
               <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-portfolio-900 text-portfolio-200 border border-portfolio-800">
-                <Portfolio size={16} />
+                <Briefcase size={16} />
                 <span className="text-sm font-medium">3D Product Designer</span>
               </div>
               

@@ -1,5 +1,5 @@
 
-import { Wand, Layers3, View, Design } from "lucide-react";
+import { Wand, Layers3, View, Pencil } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const skills = [
@@ -22,7 +22,7 @@ const skills = [
 
 const services = [
   {
-    icon: <Design className="h-6 w-6" />,
+    icon: <Pencil className="h-6 w-6" />,
     title: "Product Design",
     description: "End-to-end product design with a focus on usability, aesthetics, and manufacturability."
   },
