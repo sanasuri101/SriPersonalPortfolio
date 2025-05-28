@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: <Phone className="h-5 w-5" />,
     title: "Phone",
-    value: "+1 (555) 123-4567",
-    link: "tel:+15551234567"
+    value: "+1 (510) 557-9082",
+    link: "tel:+15105579082"
   },
   {
     icon: <MapPin className="h-5 w-5" />,
@@ -43,24 +43,38 @@ export default function ContactSection() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Send email using a simple mailto approach as fallback
+      const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
+      const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject || 'Contact Form Submission')}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Email client opened!",
+        description: "Your default email application should open with the message pre-filled. Please send it from there.",
       });
+      
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -143,7 +157,7 @@ export default function ContactSection() {
                 </div>
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Opening Email Client..." : "Send Message"}
                 </Button>
               </div>
             </form>
