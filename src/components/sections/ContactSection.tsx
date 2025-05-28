@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { personalInfo } from "@/data/resumeData";
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG, EmailTemplateParams } from "@/lib/emailjs";
 
 const contactInfo = [
   {
@@ -48,16 +50,24 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Send email using a simple mailto approach as fallback
-      const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
-      const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject || 'Contact Form Submission')}&body=${encodeURIComponent(emailBody)}`;
-      
-      // Open mailto link
-      window.location.href = mailtoLink;
+      const templateParams: EmailTemplateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject || 'Contact Form Submission',
+        message: formData.message,
+        to_email: personalInfo.email,
+      };
+
+      await emailjs.send(
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
+        templateParams,
+        EMAILJS_CONFIG.publicKey
+      );
       
       toast({
-        title: "Email client opened!",
-        description: "Your default email application should open with the message pre-filled. Please send it from there.",
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       });
       
       setFormData({
@@ -67,9 +77,10 @@ export default function ContactSection() {
         message: "",
       });
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
-        title: "Error",
-        description: "There was an issue opening your email client. Please try again.",
+        title: "Failed to send message",
+        description: "There was an error sending your message. Please try again or contact me directly.",
         variant: "destructive",
       });
     } finally {
@@ -157,7 +168,7 @@ export default function ContactSection() {
                 </div>
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Opening Email Client..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </div>
             </form>
