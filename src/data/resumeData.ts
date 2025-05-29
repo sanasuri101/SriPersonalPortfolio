@@ -1,4 +1,3 @@
-ic
 export const personalInfo = {
   name: "Sriram Anasuri",
   title: "Software Engineer | Cybersecurity Specialist | Machine Learning Engineer",
