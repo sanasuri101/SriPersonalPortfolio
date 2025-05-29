@@ -6,12 +6,12 @@ import { Layers3, ExternalLink } from "lucide-react";
 import ProjectScene from "./ProjectScene";
 import { personalInfo } from "@/data/resumeData";
 
-const projectCategories = ["All", "Product Design", "3D Modeling", "UI/UX", "Concept Art"];
+const projectCategories = ["All", "Artificial Intelligence", "Machine Learning", "Full Stack Development",];
 
 const projects = [
   {
     id: 1,
-    title: "Smart Home Controller",
+    title: "Raven's Progressive Matrices Solver",
     category: "Product Design",
     image: "/placeholder.svg",
     color: "#7b6aed",
