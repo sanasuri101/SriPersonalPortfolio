@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Layers3, ExternalLink } from "lucide-react";
 import ProjectScene from "./ProjectScene";
+import { personalInfo } from "@/data/resumeData";
 
 const projectCategories = ["All", "Product Design", "3D Modeling", "UI/UX", "Concept Art"];
 
@@ -132,7 +132,11 @@ export default function ProjectsSection() {
         </div>
         
         <div className="text-center mt-16">
-          <Button className="rounded-full px-8">View All Projects</Button>
+          <Button className="rounded-full px-8" asChild>
+            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+              View All Projects
+            </a>
+          </Button>
         </div>
       </div>
     </section>
