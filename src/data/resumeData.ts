@@ -1,4 +1,4 @@
-
+ic
 export const personalInfo = {
   name: "Sriram Anasuri",
   title: "Software Engineer | Cybersecurity Specialist | Machine Learning Engineer",
@@ -38,7 +38,7 @@ export const education = [
     degree: "Master of Science in Computer Science",
     institution: "Georgia Institute of Technology",
     period: "August 2024 - May 2026 (Expected)",
-    description: "Specializing in Machine Learning and Cybersecurity. Relevant coursework: Advanced Machine Learning, Network Security, Distributed Systems, Software Engineering. Current GPA: 3.8/4.0"
+    description: "Specializing in Machine Learning and Cybersecurity. Relevant coursework: Machine Learning, Information Security, Distributed Systems, Software Engineering, Artificial Intelligence, Robotics. Current GPA: 3.8/4.0"
   },
   {
     degree: "Bachelor of Science in Data Science",
