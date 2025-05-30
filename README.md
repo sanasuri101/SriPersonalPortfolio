@@ -1,6 +1,6 @@
 ## Project info
 
-**URL**: https://lovable.dev/projects/f64f8f6a-ea25-4c14-a80d-de2480d14c7b
+**URL**: sriramxai.com
 
 Follow these steps:
 
