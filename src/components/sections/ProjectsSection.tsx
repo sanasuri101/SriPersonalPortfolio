@@ -36,33 +36,6 @@ const projects = [
     tags: ["Automotive", "Interface", "Dashboard"],
     description: "The entire code and design for sriramxai.com."
   },
-  {
-    id: 4,
-    title: "Modular Furniture System",
-    category: "3D Modeling",
-    image: "/placeholder.svg",
-    color: "#34d399",
-    tags: ["Furniture", "Modular", "Sustainable"],
-    description: "A versatile modular furniture system designed for small living spaces with sustainability in mind."
-  },
-  {
-    id: 5,
-    title: "Futuristic Drone Concept",
-    category: "Concept Art",
-    image: "/placeholder.svg",
-    color: "#f472b6",
-    tags: ["Drone", "Concept", "Futuristic"],
-    description: "Conceptual design for a next-generation delivery drone with improved aerodynamics and battery efficiency."
-  },
-  {
-    id: 6,
-    title: "Portable Water Purifier",
-    category: "Product Design",
-    image: "/placeholder.svg",
-    color: "#fbbf24",
-    tags: ["Sustainability", "Utility", "Portable"],
-    description: "Compact water purifier designed for outdoor adventures and emergency situations."
-  }
 ];
 
 export default function ProjectsSection() {
