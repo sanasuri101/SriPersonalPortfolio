@@ -28,7 +28,6 @@ const projects = [
     color: "#60a5fa",
     tags: ["Consumer Electronics", "Ergonomics"],
     description: "Look at the steps a new user takes on Fiverr and predict which will become spammers."
-    link: "https://github.com/sanasuri101/Fiverr-Spammer-XGBOOST"
   },
   {
     id: 3,
@@ -37,7 +36,7 @@ const projects = [
     image: "/placeholder.svg",
     color: "#c084fc",
     tags: ["Automotive", "Interface", "Dashboard"],
-    description: "The entire code and design for sriramxai.com."
+    description: "The entire code and design for sriramxai.com.",
     link: "https://github.com/sanasuri101/SriPersonalPortfolio"
   },
 ];
