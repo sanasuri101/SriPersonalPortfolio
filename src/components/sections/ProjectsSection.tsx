@@ -16,7 +16,7 @@ const projects = [
     image: "/placeholder.svg",
     color: "#7b6aed",
     tags: ["IoT", "Hardware", "UI/UX"],
-    description: "A minimalist smart home controller with intuitive interface designed for seamless integration into modern homes."
+    description: "Solving RPM problems with AI and Computer Vision techniques."
   },
   {
     id: 2,
