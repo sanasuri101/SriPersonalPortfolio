@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,7 +17,8 @@ const projects = [
     image: "/placeholder.svg",
     color: "#7b6aed",
     tags: ["IoT", "Hardware", "UI/UX"],
-    description: "Solving RPM problems with AI and Computer Vision techniques."
+    description: "Solving RPM problems with AI and Computer Vision techniques.",
+    link: "https://github.com/sanasuri101/RavensProgressiveMatrices"
   },
   {
     id: 2,
@@ -85,9 +87,17 @@ export default function ProjectsSection() {
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <h3 className="text-xl font-display font-medium">{project.title}</h3>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <ExternalLink size={16} />
-                  </Button>
+                  {project.link ? (
+                    <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                      <ExternalLink size={16} />
+                    </Button>
+                  )}
                 </div>
                 
                 <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
