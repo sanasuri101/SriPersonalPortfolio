@@ -11,7 +11,7 @@ export const personalInfo = {
 export const experiences = [
   {
     position: "Software Engineer Consultant - Identity & Access Management",
-    company: "Edgile",
+    company: "Edgile/Wipro",
     period: "September 2022 - Present",
     description: "Lead cybersecurity specialist delivering enterprise IAM solutions for Fortune 500 clients. Successfully migrated 500+ applications from Okta to Microsoft Entra ID, reducing security incidents by 35%. Orchestrated MFA implementation for 10,000+ users across multiple domains, achieving 99.9% uptime. Automated SSO migration processes using Python and PowerShell, reducing manual effort by 60%. Secured 250M+ sensitive files using Microsoft Purview DLP policies and designed scalable Python-Flask platforms for automated entitlement cleanup, improving compliance audit scores by 45%.",
     technologies: ["Microsoft Entra ID", "Identity Access Management", "Python", "PowerShell", "Flask", "Microsoft Purview", "Single Sign-On (SSO)", "Multi-Factor Authentication (MFA)", "Azure Active Directory", "Cybersecurity", "Compliance"]
