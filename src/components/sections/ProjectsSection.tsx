@@ -29,12 +29,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "Electric Vehicle Dashboard",
-    category: "UI/UX",
+    title: "Personal Portfolio Website",
+    category: "Full Stack Development",
     image: "/placeholder.svg",
     color: "#c084fc",
     tags: ["Automotive", "Interface", "Dashboard"],
-    description: "A modern, intuitive dashboard UI for electric vehicles focusing on essential information and user experience."
+    description: "The entire code and design for sriramxai.com."
   },
   {
     id: 4,
