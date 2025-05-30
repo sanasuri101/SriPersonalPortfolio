@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="text-lg font-display font-bold text-gradient">Sriram Anasuri</span>
             </a>
             <p className="text-muted-foreground mt-2 text-sm">
-              Bringing designs to life through 3D innovation.
+              Bringing my ideas to life.
             </p>
           </div>
 
