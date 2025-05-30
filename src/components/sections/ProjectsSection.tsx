@@ -12,7 +12,7 @@ const projects = [
   {
     id: 1,
     title: "Raven's Progressive Matrices Solver",
-    category: "Product Design",
+    category: "Artificial Intelligence",
     image: "/placeholder.svg",
     color: "#7b6aed",
     tags: ["IoT", "Hardware", "UI/UX"],
@@ -20,12 +20,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Wireless Earbuds",
-    category: "Product Design",
+    title: "Fiverr Spammer Predictor",
+    category: "Machine Learning",
     image: "/placeholder.svg",
     color: "#60a5fa",
     tags: ["Consumer Electronics", "Ergonomics"],
-    description: "Ergonomic wireless earbuds designed for comfort during extended wear while maintaining superior sound quality."
+    description: "Look at the steps a new user takes on Fiverr and predict which will become spammers."
   },
   {
     id: 3,
