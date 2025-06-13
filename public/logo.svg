@@ -1,0 +1,119 @@
+
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for futuristic glow -->
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.8"/>
+      <stop offset="70%" style="stop-color:#0080ff;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#001a33;stop-opacity:0.1"/>
+    </radialGradient>
+    
+    <!-- Linear gradient for the icosahedron -->
+    <linearGradient id="icoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff"/>
+      <stop offset="50%" style="stop-color:#0080ff"/>
+      <stop offset="100%" style="stop-color:#003d66"/>
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark futuristic background -->
+  <rect width="400" height="400" fill="#000a1a"/>
+  
+  <!-- Background grid lines -->
+  <g stroke="#00ffff" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+  </g>
+  
+  <!-- Diagonal energy lines -->
+  <g stroke="#00ccff" stroke-width="1" opacity="0.2">
+    <line x1="0" y1="0" x2="400" y2="400"/>
+    <line x1="400" y1="0" x2="0" y2="400"/>
+    <line x1="0" y1="200" x2="200" y2="0"/>
+    <line x1="200" y1="400" x2="400" y2="200"/>
+  </g>
+  
+  <!-- Floating dots around the logo -->
+  <g fill="#00ffff" opacity="0.6">
+    <circle cx="80" cy="60" r="2">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="80" r="1.5">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="150" r="1">
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="180" r="2.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="280" r="1.5">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="320" r="2">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="350" r="1">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="40" r="1.5">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Main 20-sided shape (icosahedron projection) -->
+  <g transform="translate(200,200)" filter="url(#glow)">
+    <!-- Outer glow circle -->
+    <circle cx="0" cy="0" r="90" fill="url(#glowGradient)" opacity="0.3"/>
+    
+    <!-- Icosahedron faces - simplified 2D projection -->
+    <!-- Top triangular faces -->
+    <polygon points="0,-70 -35,-35 35,-35" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.9"/>
+    <polygon points="-35,-35 -60,0 -20,0" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.8"/>
+    <polygon points="35,-35 20,0 60,0" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Middle ring -->
+    <polygon points="-60,0 -35,35 -20,0" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.7"/>
+    <polygon points="-20,0 -35,35 20,0" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.9"/>
+    <polygon points="20,0 35,35 60,0" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Bottom triangular faces -->
+    <polygon points="-35,35 0,70 35,35" fill="url(#icoGradient)" stroke="#00ffff" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Additional inner faces for complexity -->
+    <polygon points="-35,-35 0,0 -20,0" fill="url(#icoGradient)" stroke="#00ccff" stroke-width="0.5" opacity="0.6"/>
+    <polygon points="35,-35 20,0 0,0" fill="url(#icoGradient)" stroke="#00ccff" stroke-width="0.5" opacity="0.6"/>
+    <polygon points="0,0 -35,35 -20,0" fill="url(#icoGradient)" stroke="#00ccff" stroke-width="0.5" opacity="0.5"/>
+    <polygon points="0,0 20,0 35,35" fill="url(#icoGradient)" stroke="#00ccff" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Central dots pattern -->
+    <circle cx="0" cy="-15" r="2" fill="#ffffff" opacity="0.8"/>
+    <circle cx="-10" cy="0" r="1.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="10" cy="0" r="1.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="0" cy="15" r="2" fill="#ffffff" opacity="0.8"/>
+    <circle cx="0" cy="0" r="1" fill="#ffffff" opacity="0.9"/>
+  </g>
+  
+  <!-- Rotating energy ring -->
+  <g transform="translate(200,200)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.4" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#0080ff" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,7">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
